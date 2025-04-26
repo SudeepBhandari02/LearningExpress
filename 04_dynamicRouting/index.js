@@ -31,6 +31,30 @@ app.get("/files/:fileName",(req,res)=>{
       res.render("task",{fileData:fileData,fileName:req.params.fileName});
 })});
 
+app.get("/edit/:fileName",(req,res)=>{
+    fs.readFile(`./files/${req.params.fileName}`,'utf-8',(err,fileData)=>{
+      res.render("edit",{fileData:fileData,fileName:req.params.fileName});
+    });
+});
+
+app.post("/edit/:fileName",(req,res)=>{
+    fs.writeFile(`./files/${req.params.fileName}`,req.body.newContent,(err)=>{
+        if(err){
+            console.error(err);
+            return res.status(500).send('Error editing file');
+        }
+    });
+    if(req.params.filename!==req.body.newName){
+        fs.rename(`./files/${req.params.fileName}`,`./files/${req.body.newName}`,(err)=>{
+            if(err){
+                console.error(err);
+                return res.status(500).send('Error renaming file');
+            }
+        });
+    }
+    res.redirect('/files/'+req.body.newName);
+});
+
 app.listen(3000,()=>{
     console.log("server started");
 });
