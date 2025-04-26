@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=fileName.replace(".txt","")%></title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class=" m-10 flex flex-col items-start gap-4">
+        <a class="bg-blue-500 p-2 rounded-lg font-semibold text-center" href="/"> <-- Go back</a>
+        <div class="ml-10 flex flex-col items-start gap-4">
+            <h2 class="text-4xl "> <%= fileName.replace(".txt","") %> </h2>
+            <p class="text-gray-400 text-lg"><%= fileData%></p>
+        </div>
+    </div>
+</body>
+</html>
