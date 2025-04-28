@@ -16,6 +16,7 @@ This is a **RESTful API** built with **Node.js** and **Express** to manage books
 - **Node.js**: JavaScript runtime for building the server.
 - **Express**: Web framework for building the API.
 - **Postman**: For testing the API.
+- **MongoDb Compass**:For storing the data.
 
 ## Setup Instructions
 
@@ -28,7 +29,7 @@ This is a **RESTful API** built with **Node.js** and **Express** to manage books
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/books-manager-api.git
+   git clone https://github.com/SudeepBhandari02/LearningExpress/tree/main/06_bookManager
    cd books-manager-api
    ```
 
@@ -101,7 +102,7 @@ Here is a sample collection for testing the API:
 
 ### How to import the Postman collection:
 
-1. Download the collection file: `books-manager-api.postman_collection.json`.
+1. Download the collection file: `books_manager_collection.json`.
 2. In Postman, click **Import**.
 3. Select the **File** option and import the downloaded `.json` file.
 

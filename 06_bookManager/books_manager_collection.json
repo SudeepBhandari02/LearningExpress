@@ -14,15 +14,9 @@
         "url": {
           "raw": "http://localhost:3000/api/v1/books",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "3000",
-          "path": [
-            "api",
-            "v1",
-            "books"
-          ]
+          "path": ["api", "v1", "books"]
         }
       }
     },
@@ -34,16 +28,9 @@
         "url": {
           "raw": "http://localhost:3000/api/v1/books/1",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "3000",
-          "path": [
-            "api",
-            "v1",
-            "books",
-            "1"
-          ]
+          "path": ["api", "v1", "books", "1"]
         }
       }
     },
@@ -54,27 +41,20 @@
         "header": [
           {
             "key": "Content-Type",
-            "name": "Content-Type",
             "value": "application/json",
             "type": "text"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"title\": \"The Alchemist\",\n    \"author\": \"Paulo Coelho\"\n}"
+          "raw": "{\n  \"title\": \"The Alchemist\",\n  \"author\": \"Paulo Coelho\"\n}"
         },
         "url": {
           "raw": "http://localhost:3000/api/v1/books",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "3000",
-          "path": [
-            "api",
-            "v1",
-            "books"
-          ]
+          "path": ["api", "v1", "books"]
         }
       }
     },
@@ -85,28 +65,20 @@
         "header": [
           {
             "key": "Content-Type",
-            "name": "Content-Type",
             "value": "application/json",
             "type": "text"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"title\": \"The Alchemist (Updated)\",\n    \"author\": \"Paulo Coelho\"\n}"
+          "raw": "{\n  \"id\": 1,\n  \"title\": \"The Alchemist (Updated)\",\n  \"author\": \"Paulo Coelho\"\n}"
         },
         "url": {
           "raw": "http://localhost:3000/api/v1/books/1",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "3000",
-          "path": [
-            "api",
-            "v1",
-            "books",
-            "1"
-          ]
+          "path": ["api", "v1", "books", "1"]
         }
       }
     },
@@ -118,16 +90,9 @@
         "url": {
           "raw": "http://localhost:3000/api/v1/books/1",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "3000",
-          "path": [
-            "api",
-            "v1",
-            "books",
-            "1"
-          ]
+          "path": ["api", "v1", "books", "1"]
         }
       }
     }
