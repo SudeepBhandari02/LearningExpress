@@ -2,6 +2,8 @@ const Note = require('../models/Note');
 
 exports.createNote = async (req, res) => {
   try {
+    console.log(req.body);
+    
     const note = await Note.create(req.body);
     res.status(201).json(note);
   } catch (err) {
@@ -10,6 +12,8 @@ exports.createNote = async (req, res) => {
 };
 
 exports.getAllNotes = async (req, res) => {
+  console.log("inside get notes");
+  
   const { pinned } = req.query;
   const filter = pinned ? { pinned: pinned === 'true' } : {};
 
