@@ -1,19 +1,23 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB  = require("./config/db");
-const authRoutes = require("./");
+const userRoutes = require("./routes/authRoutes");
 
 dotenv.config();
-connectDB();
-
 const app = express();
 app.use(express.json());
 
 app.use("/api/auth",userRoutes);
+const port = process.env.PORT || 5000;
+console.log(connectDB);
 
-const port = process.env.PORT || 3000;
 
-app.listen(port,()=>{
-    console.log(`Server started on port ${port}`);
-    
-})
+const startServer = async () =>{
+    connectDB();
+
+    app.listen(port,()=>{
+        console.log(`Server started on port ${port}`);
+    })
+}
+
+startServer();
