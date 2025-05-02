@@ -10,6 +10,7 @@ A simple and secure authentication API built using **Express**, **MongoDB**, **M
 - **Database**: MongoDB, Mongoose
 - **Authentication**: JWT (JSON Web Token)
 - **Security**: bcrypt for password hashing
+- **Cookies**: cookie-parser for reading cookies
 - **Environment Config**: dotenv
 
 ---
@@ -21,6 +22,8 @@ A simple and secure authentication API built using **Express**, **MongoDB**, **M
 -  Protected Profile Route (requires valid token)
 -  Passwords hashed using bcrypt
 -  JWT stored and validated using `Authorization` header
+-  Refresh token which expires after 7 days
+-  Logout route to erase reftresh token stored on client
 
 ---
 
@@ -110,7 +113,7 @@ npm run dev
 }
 ```
 
-> 🔑 Returns a JWT token.
+> 🔑 Returns access and refresh JWT tokens.
 
 ### 🔒 Get Profile (Protected)
 
@@ -122,6 +125,17 @@ Add the token to headers:
 Authorization: Bearer <your_token_here>
 ```
 
+### 🔹 Refresh Token
+
+`POST /api/auth/refresh-token`
+
+> 🔑 Returns a new access token.
+
+### 🔹 Logout User
+
+`POST /api/auth/logout`
+
+> 🔑 clears the refresh token cookie stored on client
 ---
 
 ## 📌 Important Concepts
